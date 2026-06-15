@@ -1,41 +1,69 @@
 # 海外市场数据快照
-**采集时间（北京时间）：2026-06-15 16:06**
+**采集时间（北京时间）：2026-06-15 16:15**
 > 数据说明：北京时间05:30后采集，港股/美股均已收盘，价格为前日收盘价。
 
 ## 港股指数
 | 指数 | 收盘 | 涨跌 | 数据日期 |
 |------|------|------|----------|
-| 恒生指数 | 24,839 | +0.49% | 2026-06-15 |
-| 恒生科技 | ⚠️ 404 Client Error: Not Found for url: https://query2.finance.yahoo.com/v8/finance/chart/%5EHSTECH?interval=1d&range=5d | — | — |
+| 恒生指数 | 24,831 | +0.46% | 2026-06-15 |
+| 恒生科技(ETF代理) | 4.68 | +1.43% | 2026-06-15 |
 
 ## 港股关键个股
 | 代码 | 中文名 | 收盘(HKD) | 涨跌 |
 |------|--------|-----------|------|
-| 00700 | ⚠️ invalid literal for int() with base 10: '18244938.0' | — | — |
-| 09988 | ⚠️ invalid literal for int() with base 10: '79036304.0' | — | — |
-| 01810 | ⚠️ invalid literal for int() with base 10: '90782343.0' | — | — |
-| 03690 | ⚠️ invalid literal for int() with base 10: '23246087.0' | — | — |
-| 09999 | ⚠️ invalid literal for int() with base 10: '5646605.0' | — | — |
-| 00981 | ⚠️ invalid literal for int() with base 10: '97734387.0' | — | — |
+| 00700 | 腾讯控股 | 459.60 | -0.86% |
+| 09988 | 阿里巴巴-W | 109.30 | -0.82% |
+| 01810 | 小米集团-W | 26.26 | +0.23% |
+| 03690 | 美团-W | 78.25 | +0.45% |
+| 09999 | 网易-S | 200.40 | +0.40% |
+| 00981 | 中芯国际 | 76.65 | +6.98% |
 | 02626 | ⚠️ short | — | — |
-| 03750 | ⚠️ invalid literal for int() with base 10: '3453332.0' | — | — |
-| 02382 | ⚠️ invalid literal for int() with base 10: '16926125.0' | — | — |
-| 09868 | ⚠️ invalid literal for int() with base 10: '16131896.0' | — | — |
-| 02015 | ⚠️ invalid literal for int() with base 10: '12576137.0' | — | — |
-| 09866 | ⚠️ invalid literal for int() with base 10: '2814327.0' | — | — |
-| 02513 | ⚠️ invalid literal for int() with base 10: '5467662.0' | — | — |
-| 02026 | ⚠️ invalid literal for int() with base 10: '1166050.0' | — | — |
-| 03986 | ⚠️ invalid literal for int() with base 10: '2224358.0' | — | — |
+| 03750 | 宁德时代 | 705.00 | +4.83% |
+| 02382 | 舜宇光学科技 | 76.25 | +6.57% |
+| 09868 | 小鹏集团-W | 55.70 | -3.47% |
+| 02015 | 理想汽车-W | 56.85 | -0.26% |
+| 09866 | 蔚来-SW | 41.70 | -1.00% |
+| 02513 | 智谱 | 1,457.00 | +32.82% |
+| 02026 | 小马智行-W | 64.25 | -4.03% |
+| 03986 | 兆易创新 | 723.00 | +10.64% |
 
 ## 港股今日涨幅 TOP 20
 | 代码 | 名称 | 涨跌幅 |
 |------|------|--------|
-| ⚠️ | Expecting value: line 1 column 1 (char 0) | — |
+| 0ROKU | Roku, Inc. | +20.08% |
+| 0PLBL | Polibeli Group Ltd | +17.51% |
+| 0MAAS | Maase Inc. | +15.73% |
+| 0ALMS | Alumis Inc. | +15.55% |
+| 0ELVN | Enliven Therapeutics, Inc. | +14.30% |
+| 0POET | POET Technologies Inc. | +11.38% |
+| 00ARM | Arm Holdings plc | +11.27% |
+| 0AXTI | AXT Inc | +10.01% |
+| 00FRO | Frontline Plc | +9.81% |
+| 00TGB | Taseko Mines, Ltd. | +9.49% |
+| 0AMKR | Amkor Technology, Inc. | +8.71% |
+| 0HTFL | Heartflow, Inc. | +8.38% |
+| 0VECO | Veeco Instruments Inc. | +8.29% |
+| 0CIFR | Cipher Digital Inc. | +8.26% |
+| 0ANDG | Andersen Group Inc. | +7.91% |
+| 0STUB | StubHub Holdings, Inc. | +7.91% |
+| 00SKE | Skeena Resources Limited | +7.87% |
+| 0RIVN | Rivian Automotive, Inc. | +7.85% |
+| 0ROAD | Construction Partners, Inc. | +7.73% |
+| 0AUGO | Aura Minerals Inc. | +7.62% |
 
 ## 港股今日跌幅 TOP 10
 | 代码 | 名称 | 涨跌幅 |
 |------|------|--------|
-| ⚠️ | Expecting value: line 1 column 1 (char 0) | — |
+| 00FLY | Firefly Aerospace Inc. | -19.05% |
+| 00YSS | York Space Systems Inc. | -17.88% |
+| 0ASTS | AST SpaceMobile, Inc. | -15.53% |
+| 0VOYG | Voyager Technologies, Inc. | -14.04% |
+| 0LUNR | Intuitive Machines, Inc. | -13.12% |
+| 0NAVN | Navan, Inc. | -11.93% |
+| 00RDW | Redwire Corporation | -11.53% |
+| 0SATS | EchoStar Corporation | -10.97% |
+| 0RKLB | Rocket Lab Corporation | -10.79% |
+| 000PL | Planet Labs PBC | -8.84% |
 
 ## 美股指数
 | 指数 | 收盘 | 涨跌 | 数据日期 |
@@ -44,7 +72,7 @@
 | 纳斯达克100 | 29,636 | +0.64% | 2026-06-12 |
 | 纳斯达克综合 | 25,889 | +0.31% | 2026-06-12 |
 | 道琼斯 | 51,202 | +0.70% | 2026-06-12 |
-| VIX | 16.76 | -5.20% | 2026-06-15 |
+| VIX | 16.83 | -4.81% | 2026-06-15 |
 | 10Y美债收益率(%) | 4.49 | +0.54% | 2026-06-12 |
 
 ## 美股关键个股
@@ -73,13 +101,13 @@
 ## 黄金 / 美元 / 原油 / 加密货币
 | 品种 | 最新价 | 涨跌 | 数据日期 |
 |------|--------|------|----------|
-| COMEX黄金期货 (USD/oz) | 4,343.10 USD | +3.04% | 2026-06-15 |
-| 白银期货 (USD/oz) | 70.36 USD | +3.69% | 2026-06-15 |
-| 美元指数 DXY | 99.53 USD | -0.22% | 2026-06-15 |
-| WTI原油期货 (USD/bbl) | 80.40 USD | -5.28% | 2026-06-15 |
-| 布伦特原油 (USD/bbl) | 83.20 USD | -4.73% | 2026-06-15 |
-| 比特币 BTC (USD) | 65,698 USD | +1.98% | 2026-06-15 |
-| 以太坊 ETH (USD) | 1,718.96 USD | +2.31% | 2026-06-15 |
+| COMEX黄金期货 (USD/oz) | 4,347.60 USD | +3.15% | 2026-06-15 |
+| 白银期货 (USD/oz) | 70.39 USD | +3.72% | 2026-06-15 |
+| 美元指数 DXY | 99.52 USD | -0.23% | 2026-06-15 |
+| WTI原油期货 (USD/bbl) | 80.56 USD | -5.09% | 2026-06-15 |
+| 布伦特原油 (USD/bbl) | 83.30 USD | -4.61% | 2026-06-15 |
+| 比特币 BTC (USD) | 65,706 USD | +1.99% | 2026-06-15 |
+| 以太坊 ETH (USD) | 1,719.31 USD | +2.33% | 2026-06-15 |
 
 ---
-*由 GitHub Actions 自动生成 · 2026-06-15 16:06 北京时间*
+*由 GitHub Actions 自动生成 · 2026-06-15 16:15 北京时间*
