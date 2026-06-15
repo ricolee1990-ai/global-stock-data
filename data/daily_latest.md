@@ -1,113 +1,173 @@
 # 海外市场数据快照
-**采集时间（北京时间）：2026-06-15 16:15**
+**采集时间（北京时间）：2026-06-15 16:55**
 > 数据说明：北京时间05:30后采集，港股/美股均已收盘，价格为前日收盘价。
 
-## 港股指数
-| 指数 | 收盘 | 涨跌 | 数据日期 |
-|------|------|------|----------|
-| 恒生指数 | 24,831 | +0.46% | 2026-06-15 |
-| 恒生科技(ETF代理) | 4.68 | +1.43% | 2026-06-15 |
-
-## 港股关键个股
-| 代码 | 中文名 | 收盘(HKD) | 涨跌 |
-|------|--------|-----------|------|
-| 00700 | 腾讯控股 | 459.60 | -0.86% |
-| 09988 | 阿里巴巴-W | 109.30 | -0.82% |
-| 01810 | 小米集团-W | 26.26 | +0.23% |
-| 03690 | 美团-W | 78.25 | +0.45% |
-| 09999 | 网易-S | 200.40 | +0.40% |
-| 00981 | 中芯国际 | 76.65 | +6.98% |
-| 02626 | ⚠️ short | — | — |
-| 03750 | 宁德时代 | 705.00 | +4.83% |
-| 02382 | 舜宇光学科技 | 76.25 | +6.57% |
-| 09868 | 小鹏集团-W | 55.70 | -3.47% |
-| 02015 | 理想汽车-W | 56.85 | -0.26% |
-| 09866 | 蔚来-SW | 41.70 | -1.00% |
-| 02513 | 智谱 | 1,457.00 | +32.82% |
-| 02026 | 小马智行-W | 64.25 | -4.03% |
-| 03986 | 兆易创新 | 723.00 | +10.64% |
-
-## 港股今日涨幅 TOP 20
-| 代码 | 名称 | 涨跌幅 |
-|------|------|--------|
-| 0ROKU | Roku, Inc. | +20.08% |
-| 0PLBL | Polibeli Group Ltd | +17.51% |
-| 0MAAS | Maase Inc. | +15.73% |
-| 0ALMS | Alumis Inc. | +15.55% |
-| 0ELVN | Enliven Therapeutics, Inc. | +14.30% |
-| 0POET | POET Technologies Inc. | +11.38% |
-| 00ARM | Arm Holdings plc | +11.27% |
-| 0AXTI | AXT Inc | +10.01% |
-| 00FRO | Frontline Plc | +9.81% |
-| 00TGB | Taseko Mines, Ltd. | +9.49% |
-| 0AMKR | Amkor Technology, Inc. | +8.71% |
-| 0HTFL | Heartflow, Inc. | +8.38% |
-| 0VECO | Veeco Instruments Inc. | +8.29% |
-| 0CIFR | Cipher Digital Inc. | +8.26% |
-| 0ANDG | Andersen Group Inc. | +7.91% |
-| 0STUB | StubHub Holdings, Inc. | +7.91% |
-| 00SKE | Skeena Resources Limited | +7.87% |
-| 0RIVN | Rivian Automotive, Inc. | +7.85% |
-| 0ROAD | Construction Partners, Inc. | +7.73% |
-| 0AUGO | Aura Minerals Inc. | +7.62% |
-
-## 港股今日跌幅 TOP 10
-| 代码 | 名称 | 涨跌幅 |
-|------|------|--------|
-| 00FLY | Firefly Aerospace Inc. | -19.05% |
-| 00YSS | York Space Systems Inc. | -17.88% |
-| 0ASTS | AST SpaceMobile, Inc. | -15.53% |
-| 0VOYG | Voyager Technologies, Inc. | -14.04% |
-| 0LUNR | Intuitive Machines, Inc. | -13.12% |
-| 0NAVN | Navan, Inc. | -11.93% |
-| 00RDW | Redwire Corporation | -11.53% |
-| 0SATS | EchoStar Corporation | -10.97% |
-| 0RKLB | Rocket Lab Corporation | -10.79% |
-| 000PL | Planet Labs PBC | -8.84% |
-
-## 美股指数
-| 指数 | 收盘 | 涨跌 | 数据日期 |
-|------|------|------|----------|
+## 美股基准指数
+| 指数 | 收盘 | 涨跌幅 | 日期 |
+|------|------|--------|------|
 | 标普500 | 7,431.46 | +0.50% | 2026-06-12 |
 | 纳斯达克100 | 29,636 | +0.64% | 2026-06-12 |
 | 纳斯达克综合 | 25,889 | +0.31% | 2026-06-12 |
 | 道琼斯 | 51,202 | +0.70% | 2026-06-12 |
-| VIX | 16.83 | -4.81% | 2026-06-15 |
-| 10Y美债收益率(%) | 4.49 | +0.54% | 2026-06-12 |
+| VIX恐慌指数 | 16.65 | -5.83% | 2026-06-15 |
+| 10Y美债(%) | 4.49 | +0.54% | 2026-06-12 |
 
-## 美股关键个股
-| Ticker | 中文名 | 收盘(USD) | 涨跌 |
-|--------|--------|-----------|------|
-| AAPL | 苹果 | $291.13 | -1.52% |
-| NVDA | 英伟达 | $205.19 | +0.16% |
-| MSFT | 微软 | $390.74 | +0.10% |
-| GOOGL | 谷歌A类股 | $359.68 | +0.53% |
-| AMZN | 亚马逊 | $238.55 | -1.23% |
-| META | Meta Platfor | $566.98 | -0.26% |
-| SNDK | 闪迪 | $1,980.10 | +5.24% |
-| MU | 美光 | $981.61 | -1.43% |
-| INTC | Intel Corpor | $124.57 | +6.51% |
-| AMD | AMD | $511.57 | +4.73% |
-| AVGO | 博通 | $382.07 | -0.91% |
-| CRWD | CrowdStrike  | $682.80 | -1.26% |
-| PANW | 派拓网络 | $279.62 | +0.03% |
-| NVO | 诺和诺德 | $43.88 | -0.18% |
-| LLY | 礼来 | $1,133.00 | -2.41% |
-| COIN | COIN | $159.78 | -0.41% |
-| MSTR | Strategy Inc | $123.97 | +3.18% |
-| DKNG | DKNG | $29.00 | -3.40% |
-| TSM | 台积电 | $423.93 | +0.68% |
+## 美股板块行情（全11板块，SPDR ETF代理）
+| 板块 | ETF | 涨跌幅 | 信号 |
+|------|-----|--------|------|
+| Basic Materials | XLB | +1.87% | 偏强 |
+| Financial Services | XLF | +1.37% | 偏强 |
+| Utilities | XLU | +1.09% | 偏强 |
+| Real Estate | XLRE | +0.98% | 平稳 |
+| Technology | XLK | +0.87% | 平稳 |
+| Energy | XLE | +0.75% | 平稳 |
+| Consumer Defensive | XLP | +0.65% | 平稳 |
+| Industrials | XLI | +0.59% | 平稳 |
+| Communication Services | XLC | -0.42% | 平稳 |
+| Consumer Cyclical | XLY | +0.26% | 平稳 |
+| Healthcare | XLV | -0.18% | 平稳 |
+
+## 美股今日涨幅 TOP 15（全市场，跨板块）
+| Ticker | 名称 | 涨跌幅 | 板块 | 收盘(USD) |
+|--------|------|--------|------|-----------|
+| ROKU | Roku, Inc. | +20.08% |  | $143.66 |
+| ALMS | Alumis Inc. | +15.55% |  | $24.15 |
+| ELVN | Enliven Therapeu | +14.30% |  | $46.13 |
+| ARM | Arm Holdings plc | +11.27% |  | $380.81 |
+| AXTI | AXT Inc | +10.01% |  | $97.18 |
+| FRO | Frontline Plc | +9.81% |  | $39.07 |
+| AMKR | Amkor Technology | +8.71% |  | $82.78 |
+| HTFL | Heartflow, Inc. | +8.38% |  | $33.24 |
+| VECO | Veeco Instrument | +8.29% |  | $77.48 |
+| CIFR | Cipher Digital I | +8.26% |  | $24.50 |
+| ANDG | Andersen Group I | +7.91% |  | $37.78 |
+| STUB | StubHub Holdings | +7.91% |  | $11.46 |
+| SKE | Skeena Resources | +7.87% |  | $28.11 |
+| RIVN | Rivian Automotiv | +7.85% |  | $16.76 |
+| ROAD | Construction Par | +7.73% |  | $113.87 |
+
+## 美股今日跌幅 TOP 10（全市场，跨板块）
+| Ticker | 名称 | 涨跌幅 | 板块 | 收盘(USD) |
+|--------|------|--------|------|-----------|
+| YSS | York Space Syste | -17.88% |  | $27.69 |
+| ASTS | AST SpaceMobile, | -15.53% |  | $82.41 |
+| VOYG | Voyager Technolo | -14.04% |  | $41.15 |
+| NAVN | Navan, Inc. | -11.93% |  | $19.93 |
+| RDW | Redwire Corporat | -11.53% |  | $15.12 |
+| SATS | EchoStar Corpora | -10.97% |  | $114.08 |
+| RKLB | Rocket Lab Corpo | -10.79% |  | $102.39 |
+| PL | Planet Labs PBC | -8.84% |  | $31.15 |
+| MDA | MDA Space Ltd. | -8.72% |  | $37.27 |
+| SOC | Sable Offshore C | -7.17% |  | $10.88 |
+
+## 港股基准指数
+| 指数 | 收盘 | 涨跌幅 |
+|------|------|--------|
+| 恒生指数 | 24,796 | +112.90% |
+| 恒生科技指数 | 4,737.97 | +62.61% |
+| 国企指数(H股) | 8,357.25 | -5.90% |
+
+## 港股板块行情（全11板块，按平均涨跌幅排序）
+| 板块 | 平均涨跌幅 | 覆盖股数 | 信号 |
+|------|-----------|---------|------|
+
+## 港股今日涨幅 TOP 20
+| 代码 | 名称 | 涨跌幅 | 板块 | 收盘(HKD) |
+|------|------|--------|------|-----------|
+
+## 港股今日跌幅 TOP 10
+| 代码 | 名称 | 涨跌幅 | 板块 | 收盘(HKD) |
+|------|------|--------|------|-----------|
 
 ## 黄金 / 美元 / 原油 / 加密货币
-| 品种 | 最新价 | 涨跌 | 数据日期 |
-|------|--------|------|----------|
-| COMEX黄金期货 (USD/oz) | 4,347.60 USD | +3.15% | 2026-06-15 |
-| 白银期货 (USD/oz) | 70.39 USD | +3.72% | 2026-06-15 |
-| 美元指数 DXY | 99.52 USD | -0.23% | 2026-06-15 |
-| WTI原油期货 (USD/bbl) | 80.56 USD | -5.09% | 2026-06-15 |
-| 布伦特原油 (USD/bbl) | 83.30 USD | -4.61% | 2026-06-15 |
-| 比特币 BTC (USD) | 65,706 USD | +1.99% | 2026-06-15 |
-| 以太坊 ETH (USD) | 1,719.31 USD | +2.33% | 2026-06-15 |
+| 品种 | 最新价 | 涨跌幅 | 日期 |
+|------|--------|--------|------|
+| COMEX黄金 (USD/oz) | 4,362.30 USD | +3.49% | 2026-06-15 |
+| 白银 (USD/oz) | 70.62 USD | +4.07% | 2026-06-15 |
+| 美元指数 DXY | 99.56 USD | -0.19% | 2026-06-15 |
+| WTI原油 (USD/bbl) | 80.29 USD | -5.41% | 2026-06-15 |
+| 布伦特原油 (USD/bbl) | 82.97 USD | -4.99% | 2026-06-15 |
+| 比特币 BTC | 65,628 USD | +1.87% | 2026-06-15 |
+| 以太坊 ETH | 1,719.20 USD | +2.32% | 2026-06-15 |
 
 ---
-*由 GitHub Actions 自动生成 · 2026-06-15 16:15 北京时间*
+## [内部分析信号] 仅供Claude核查催化剂，不出现在日报正文
+
+### 美股异动个股（大市值，|涨跌|≥3%，需核查催化剂）
+| Ticker | 名称 | 涨跌幅 | 板块 |
+|--------|------|--------|------|
+| ARM | Arm Holdings plc | +11.27% |  |
+| AXTI | AXT Inc | +10.01% |  |
+| AMKR | Amkor Technology | +8.71% |  |
+| CIFR | Cipher Digital I | +8.26% |  |
+| AUGO | Aura Minerals In | +7.62% |  |
+| MOS | Mosaic Company ( | +7.59% |  |
+| ALB | Albemarle Corpor | +7.42% |  |
+| STX | Seagate Technolo | +7.25% |  |
+| FORM | FormFactor, Inc. | +6.89% |  |
+| ONTO | Onto Innovation  | +6.70% |  |
+| INTC | Intel Corporatio | +6.51% |  |
+| VIAV | Viavi Solutions  | +6.41% |  |
+| WDC | Western Digital  | +6.35% |  |
+| COHR | Coherent Corp. | +5.90% |  |
+| TER | Teradyne, Inc. | +5.72% |  |
+| BGC | BGC Group, Inc. | +5.71% |  |
+| KLAC | KLA Corporation | +5.55% |  |
+| IREN | IREN LIMITED | +5.40% |  |
+| SNDK | Sandisk Corporat | +5.24% |  |
+| ALGM | Allegro MicroSys | +5.10% |  |
+| RYN | Rayonier Inc. RE | +5.08% |  |
+| NOK | Nokia Corporatio | +5.04% |  |
+| CRWV | CoreWeave, Inc. | +5.02% |  |
+| FN | Fabrinet | +4.94% |  |
+| CDE | Coeur Mining, In | +4.88% |  |
+| AMD | Advanced Micro D | +4.73% |  |
+| UMC | United Microelec | +4.59% |  |
+| SQM | Sociedad Quimica | +4.57% |  |
+| TLN | Talen Energy Cor | +4.56% |  |
+| WSE | Wise Group plc | +4.52% |  |
+| HBM | Hudbay Minerals  | +4.43% |  |
+| ANET | Arista Networks, | +4.37% |  |
+| IOT | Samsara Inc. | +4.34% |  |
+| KB | KB Financial Gro | +4.33% |  |
+| KEP | Korea Electric P | +4.33% |  |
+| QCOM | QUALCOMM Incorpo | +4.32% |  |
+| AG | First Majestic S | +4.31% |  |
+| P | Everpure, Inc. | +4.28% |  |
+| HMY | Harmony Gold Min | +4.27% |  |
+| SCCO | Southern Copper  | +4.19% |  |
+| NVMI | Nova Ltd. | +4.19% |  |
+| MXL | MaxLinear, Inc | +4.16% |  |
+| TFPM | Triple Flag Prec | +4.14% |  |
+| ENTG | Entegris, Inc. | +3.86% |  |
+| OGC | OceanaGold Corpo | +3.84% |  |
+| ACLS | Axcelis Technolo | +3.77% |  |
+| AU | AngloGold Ashant | +3.75% |  |
+| TTMI | TTM Technologies | +3.65% |  |
+| LITE | Lumentum Holding | +3.59% |  |
+| ASX | ASE Technology H | +3.59% |  |
+| LPLA | LPL Financial Ho | +3.58% |  |
+| PKX | POSCO Holdings I | +3.55% |  |
+| CE | Celanese Corpora | +3.50% |  |
+| PAAS | Pan American Sil | +3.46% |  |
+| SSRM | SSR Mining Inc. | +3.46% |  |
+| DB | Deutsche Bank AG | +3.42% |  |
+| GWRE | Guidewire Softwa | +3.41% |  |
+| JEF | Jefferies Financ | +3.35% |  |
+| OR | OR Royalties Inc | +3.33% |  |
+| SANM | Sanmina Corporat | +3.33% |  |
+| WFG | West Fraser Timb | +3.23% |  |
+| BHP | BHP Group Limite | +3.20% |  |
+| MSTR | Strategy Inc | +3.18% |  |
+| IAG | Iamgold Corporat | +3.16% |  |
+| AVAL | Grupo Aval Accio | +3.16% |  |
+| NTR | Nutrien Ltd. | +3.14% |  |
+| KEYS | Keysight Technol | +3.13% |  |
+| FCX | Freeport-McMoRan | +3.12% |  |
+| IPGP | IPG Photonics Co | +3.11% |  |
+| AEM | Agnico Eagle Min | +3.09% |  |
+| WPM | Wheaton Precious | +3.05% |  |
+| DD | DuPont de Nemour | +3.03% |  |
+| MKSI | MKS Inc. | +3.00% |  |
+
+*由 GitHub Actions 自动生成 · 2026-06-15 16:55 北京时间*
