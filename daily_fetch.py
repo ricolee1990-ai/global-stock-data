@@ -73,7 +73,7 @@ def hk_quote(code: str) -> dict:
         price = float(f[3]) if f[3] else 0
         prev  = float(f[4]) if f[4] else 0
         chg   = float(f[32]) if f[32] else 0
-        vol   = int(f[6]) if f[6] else 0
+        vol   = int(float(f[6])) if f[6] else 0   # 腾讯返回浮点字符串，需先转float再转int
         amt   = float(f[37]) if f[37] else 0
         return {
             "code": code, "name": f[1],
@@ -111,20 +111,67 @@ def us_quote(ticker: str) -> dict:
         return {"ticker": ticker, "error": str(e)}
 
 
-def hk_market_rank(n: int = 20, descending: bool = True) -> list:
-    """东财 push2 — 港股全市场涨跌幅排名"""
+def hk_market_rank_yahoo(n: int = 20, descending: bool = True) -> list:
+    """Yahoo Finance港股涨跌幅排名 — 境外IP可用，作为东财的fallback"""
     try:
+        # Step1: 获取cookie+crumb
+        s = requests.Session()
+        s.headers["User-Agent"] = UA
+        s.get("https://fc.yahoo.com", timeout=10)
+        r = s.get("https://query2.finance.yahoo.com/v1/test/getcrumb", timeout=10)
+        r.raise_for_status()
+        crumb = r.text
+
+        # Step2: 调screener
+        scr_id = "day_gainers" if descending else "day_losers"
+        r2 = s.get(
+            "https://query2.finance.yahoo.com/v1/finance/screener/predefined/saved",
+            params={"count": n, "scrIds": scr_id, "region": "HK",
+                    "lang": "zh-Hant-HK", "crumb": crumb},
+            timeout=15,
+        )
+        r2.raise_for_status()
+        quotes = r2.json().get("finance", {}).get("result", [{}])[0].get("quotes", [])
+        result = []
+        for q in quotes[:n]:
+            result.append({
+                "code": q.get("symbol", "").replace(".HK", "").zfill(5),
+                "name": q.get("shortName") or q.get("longName") or q.get("symbol"),
+                "change_pct": round(q.get("regularMarketChangePercent", 0), 2),
+                "amount": q.get("regularMarketVolume", 0),
+            })
+        return result if result else [{"error": "Yahoo screener返回空"}]
+    except Exception as e:
+        return [{"error": f"Yahoo fallback失败: {e}"}]
+
+
+def hk_market_rank(n: int = 20, descending: bool = True) -> list:
+    """港股全市场涨跌幅排名 — 优先东财，境外IP自动切Yahoo"""
+    try:
+        headers = {
+            "User-Agent": UA,
+            "Referer": "https://www.eastmoney.com/",
+        }
         r = requests.get("https://push2.eastmoney.com/api/qt/clist/get", params={
             "fs": "m:116", "fields": "f2,f3,f5,f6,f12,f14",
             "pn": 1, "pz": n, "fid": "f3", "po": 1 if descending else 0,
-        }, timeout=15)
-        diff = r.json().get("data", {}).get("diff", [])
+        }, headers=headers, timeout=10)
+
+        if r.status_code != 200 or not r.text:
+            raise ValueError(f"东财HTTP {r.status_code}")
+
+        diff = r.json().get("data", {}).get("diff")
+        if not diff:
+            raise ValueError("东财返回空，切Yahoo")
+
         return [{"code": s["f12"], "name": s["f14"],
                  "change_pct": round(s["f3"] / 100, 2),
                  "amount": s.get("f6", 0)}
                 for s in diff if s.get("f3") is not None]
-    except Exception as e:
-        return [{"error": str(e)}]
+
+    except Exception:
+        # 东财失败（境外IP被拒）→ 自动切Yahoo Finance
+        return hk_market_rank_yahoo(n, descending)
 
 
 # ──────────────────────────────────────────────
@@ -158,7 +205,10 @@ def build_report() -> str:
     lines.append("## 港股指数")
     lines.append("| 指数 | 收盘 | 涨跌 | 数据日期 |")
     lines.append("|------|------|------|----------|")
-    for sym, label in [("^HSI", "恒生指数"), ("^HSTECH", "恒生科技")]:
+    for sym, label in [
+        ("^HSI",    "恒生指数"),
+        ("3033.HK", "恒生科技(ETF代理)"),  # Yahoo无^HSTECH，用CSOP ETF代替
+    ]:
         q = yahoo_chart_close(sym)
         if "error" in q:
             lines.append(f"| {label} | ⚠️ {q['error']} | — | — |")
