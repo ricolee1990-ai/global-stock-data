@@ -2,10 +2,10 @@ name: 每日市场数据采集
 
 on:
   schedule:
-    - cron: '30 21 * * 0-4'
+    - cron: '30 21 * * 0-4'   # 北京时间 05:30，周一到周五
   workflow_dispatch:
 
-permissions:          # ← 必须在这个位置
+permissions:
   contents: write
 
 env:
@@ -17,6 +17,11 @@ jobs:
     steps:
       - name: 检出仓库
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0        # 拉完整历史，避免 non-fast-forward
+
+      - name: 拉取最新远端（防止并发冲突）
+        run: git pull --rebase origin main || git pull origin main
 
       - name: 配置 Python
         uses: actions/setup-python@v5
@@ -34,3 +39,4 @@ jobs:
         with:
           commit_message: "Auto: daily market data ${{ github.run_number }}"
           file_pattern: "data/*.md"
+          push_options: '--force'   # 数据文件以最新为准，强制推送
