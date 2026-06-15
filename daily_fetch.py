@@ -108,6 +108,11 @@ def yahoo_close(symbol: str) -> dict:
 # 新浪港股指数（真实点位）
 # ──────────────────────────────────────────────
 def hk_index_sina(sina_code: str, label: str) -> dict:
+    """
+    新浪港股指数行情
+    实测字段: f[5]=收盘价, f[7]=涨跌额(点数,非%), 涨跌%需用点数推算
+    公式: prev = price - chg_pts; chg_pct = chg_pts / prev * 100
+    """
     try:
         r = requests.get(
             f"https://hq.sinajs.cn/list={sina_code}",
@@ -118,14 +123,13 @@ def hk_index_sina(sina_code: str, label: str) -> dict:
         if not m:
             return {"label": label, "error": "empty"}
         f = m.group(1).split(",")
-        if len(f) < 6:
+        if len(f) < 8:
             return {"label": label, "error": "short"}
-        # 新浪HK指数字段: f[1]=收盘价, f[2]=开盘, f[5]=昨收, f[6]=涨跌额(点数,非%)
-        price   = float(f[1]) if f[1] else 0
-        prev    = float(f[5]) if f[5] else 0
-        # 用(price-prev)/prev计算百分比，避免把绝对点数误用为百分比
-        chg_pct = round((price - prev) / prev * 100, 2) if prev and prev != price else 0
-        return {"label": label, "price": round(price, 2), "change_pct": round(chg_pct, 2)}
+        price    = float(f[5]) if f[5] else 0   # 收盘/最新价（实测f[5]正确）
+        chg_pts  = float(f[7]) if f[7] else 0   # 涨跌额（点数，非百分比）
+        prev     = price - chg_pts               # 昨收 = 今收 - 涨跌额
+        chg_pct  = round(chg_pts / prev * 100, 2) if prev != 0 else 0
+        return {"label": label, "price": round(price, 2), "change_pct": chg_pct}
     except Exception as e:
         return {"label": label, "error": str(e)}
 
@@ -424,18 +428,28 @@ def build_report() -> str:
     # 港股指数（新浪真实点位）
     # ════════════════════════════════════════
     L.append("## 港股基准指数")
-    L.append("| 指数 | 收盘 | 涨跌幅 |")
-    L.append("|------|------|--------|")
-    for code, label in [
-        ("hkHSI",    "恒生指数"),
-        ("hkHSTECH", "恒生科技指数"),
-        ("hkHSCEI",  "国企指数(H股)"),
-    ]:
-        q = hk_index_sina(code, label)
+    L.append("| 指数 | 收盘 | 涨跌幅 | 日期 |")
+    L.append("|------|------|--------|------|")
+
+    # HSI / HSCEI — Yahoo Finance（境外IP可访问，稳定）
+    for sym, label in [("^HSI", "恒生指数"), ("^HSCE", "国企指数(H股)")]:
+        q = yahoo_close(sym)
         if "error" in q:
-            L.append(f"| {label} | ⚠️ {q['error']} | — |")
+            L.append(f"| {label} | ⚠️ {q.get('error','')} | — | — |")
         else:
-            L.append(f"| {label} | {fmt_price(q['price'])} | {fmt_chg(q['change_pct'])} |")
+            L.append(f"| {label} | {fmt_price(q['price'])} | {fmt_chg(q['change_pct'])} | {q['date']} |")
+
+    # HSTECH — 优先Yahoo ^HSTECH，失败回退新浪 hkHSTECH，均失败报错（不用ETF代理）
+    hstech_q = yahoo_close("^HSTECH")
+    if "error" not in hstech_q:
+        L.append(f"| 恒生科技指数 | {fmt_price(hstech_q['price'])} | {fmt_chg(hstech_q['change_pct'])} | {hstech_q['date']} |")
+    else:
+        sina_q = hk_index_sina("hkHSTECH", "恒生科技指数")
+        if "error" not in sina_q:
+            now_date = datetime.now(BEIJING).strftime("%Y-%m-%d")
+            L.append(f"| 恒生科技指数 | {fmt_price(sina_q['price'])} | {fmt_chg(sina_q['change_pct'])} | {now_date} |")
+        else:
+            L.append(f"| 恒生科技指数 | ⚠️ Yahoo+Sina均不可用 | — | — |")
     L.append("")
 
     # ════════════════════════════════════════
