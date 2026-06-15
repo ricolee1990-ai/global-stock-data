@@ -33,6 +33,25 @@ US_SECTORS = {
     "Utilities":              "XLU",
 }
 
+# 板块英文→中文映射（美股和港股共用）
+SECTOR_CN = {
+    "Technology":             "科技",
+    "Communication Services": "通信服务",
+    "Consumer Cyclical":      "非必需消费",
+    "Healthcare":             "医疗保健",
+    "Financial Services":     "金融服务",
+    "Industrials":            "工业",
+    "Energy":                 "能源",
+    "Basic Materials":        "原材料",
+    "Real Estate":            "房地产",
+    "Consumer Defensive":     "必需消费",
+    "Utilities":              "公用事业",
+}
+
+def cn_sector(en: str) -> str:
+    """把Yahoo英文板块名转成中文，未知板块保留英文"""
+    return SECTOR_CN.get(en, en) if en else "—"
+
 # ──────────────────────────────────────────────
 # Yahoo crumb session（全局复用）
 # ──────────────────────────────────────────────
@@ -101,10 +120,11 @@ def hk_index_sina(sina_code: str, label: str) -> dict:
         f = m.group(1).split(",")
         if len(f) < 6:
             return {"label": label, "error": "short"}
-        price   = float(f[5]) if f[5] else 0
-        prev    = float(f[2]) if f[2] else 0
-        chg_pct = float(f[7]) if len(f) > 7 and f[7] else (
-            round((price - prev) / prev * 100, 2) if prev else 0)
+        # 新浪HK指数字段: f[1]=收盘价, f[2]=开盘, f[5]=昨收, f[6]=涨跌额(点数,非%)
+        price   = float(f[1]) if f[1] else 0
+        prev    = float(f[5]) if f[5] else 0
+        # 用(price-prev)/prev计算百分比，避免把绝对点数误用为百分比
+        chg_pct = round((price - prev) / prev * 100, 2) if prev and prev != price else 0
         return {"label": label, "price": round(price, 2), "change_pct": round(chg_pct, 2)}
     except Exception as e:
         return {"label": label, "error": str(e)}
@@ -222,6 +242,114 @@ def signal_bar(pct):
 # ──────────────────────────────────────────────
 # 主报告
 # ──────────────────────────────────────────────
+
+def us_movers_yahoo(n: int, descending: bool = True) -> list:
+    """
+    美股涨跌幅排名 — 用Yahoo预定义screener(day_gainers/day_losers)
+    该接口返回sector字段，POST screener不返回
+    """
+    try:
+        s = yahoo_session()
+        scr_id = "day_gainers" if descending else "day_losers"
+        r = s.get(
+            "https://query2.finance.yahoo.com/v1/finance/screener/predefined/saved",
+            params={"count": n + 10, "scrIds": scr_id, "crumb": s._crumb},
+            timeout=15,
+        )
+        r.raise_for_status()
+        quotes = r.json().get("finance", {}).get("result", [{}])[0].get("quotes", [])
+        # 只保留美股（无.后缀，排除港股.HK、加股.TO等）
+        us_only = [q for q in quotes
+                   if q.get("exchange","") in ("NMS","NYQ","ASE","NGM","NCM")
+                   or "." not in q.get("symbol","")]
+        result = []
+        for q in us_only[:n]:
+            result.append({
+                "code":       q.get("symbol",""),
+                "name":       (q.get("shortName") or q.get("longName") or q.get("symbol",""))[:16],
+                "change_pct": round(q.get("regularMarketChangePercent", 0), 2),
+                "price":      round(q.get("regularMarketPrice", 0), 2),
+                "sector":     q.get("sector", ""),
+            })
+        return result if result else [{"error": "day_gainers/losers返回空"}]
+    except Exception as e:
+        print(f"US movers异常: {e}", file=sys.stderr)
+        return [{"error": str(e)}]
+
+
+def hk_batch_yahoo(n: int = 150) -> list:
+    """
+    港股批量获取 — 用Yahoo预定义screener(most_actives, region=HK)
+    Yahoo POST screener不支持exchange=HKG，改用此方案
+    返回带sector字段的股票列表，供板块分组用
+    """
+    try:
+        s = yahoo_session()
+        # most_actives按成交量排名，覆盖面最广，含sector字段
+        r = s.get(
+            "https://query2.finance.yahoo.com/v1/finance/screener/predefined/saved",
+            params={
+                "count": n,
+                "scrIds": "most_actives",
+                "region": "HK",
+                "lang": "en-HK",
+                "crumb": s._crumb,
+            },
+            timeout=20,
+        )
+        r.raise_for_status()
+        quotes = r.json().get("finance", {}).get("result", [{}])[0].get("quotes", [])
+        # 严格过滤：只保留.HK symbol，排除混入的美股ADR
+        hk_only = [q for q in quotes if q.get("symbol", "").endswith(".HK")]
+        result = [parse_quote(q, "hk") for q in hk_only]
+        print(f"HK batch: {len(result)}只股票", file=sys.stderr)
+        return result if result else [{"error": "most_actives返回0只HK股票"}]
+    except Exception as e:
+        print(f"HK batch异常: {e}", file=sys.stderr)
+        return [{"error": str(e)}]
+
+
+def hk_movers_yahoo(n: int, descending: bool = True) -> list:
+    """
+    港股涨跌幅排名 — 优先东财push2，失败改用Yahoo day_gainers/day_losers
+    """
+    # 优先试东财
+    try:
+        r = requests.get("https://push2.eastmoney.com/api/qt/clist/get", params={
+            "fs": "m:116", "fields": "f2,f3,f5,f6,f12,f14",
+            "pn": 1, "pz": n, "fid": "f3", "po": 1 if descending else 0,
+        }, headers={"User-Agent": UA, "Referer": "https://www.eastmoney.com/"}, timeout=8)
+        diff = r.json().get("data", {}).get("diff")
+        if diff:
+            return [{"code": s["f12"], "name": s["f14"],
+                     "change_pct": round(s["f3"] / 100, 2), "sector": ""}
+                    for s in diff if s.get("f3") is not None]
+    except Exception:
+        pass
+
+    # 东财失败 → Yahoo预定义screener
+    try:
+        s = yahoo_session()
+        scr_id = "day_gainers" if descending else "day_losers"
+        r = s.get(
+            "https://query2.finance.yahoo.com/v1/finance/screener/predefined/saved",
+            params={"count": n, "scrIds": scr_id,
+                    "region": "HK", "lang": "en-HK", "crumb": s._crumb},
+            timeout=15,
+        )
+        r.raise_for_status()
+        quotes = r.json().get("finance", {}).get("result", [{}])[0].get("quotes", [])
+        hk_only = [q for q in quotes if q.get("symbol", "").endswith(".HK")]
+        return [{"code": q["symbol"].replace(".HK","").zfill(5),
+                 "name": q.get("shortName",""),
+                 "change_pct": round(q.get("regularMarketChangePercent", 0), 2),
+                 "sector": q.get("sector", ""),
+                 "price": round(q.get("regularMarketPrice", 0), 2)}
+                for q in hk_only[:n]]
+    except Exception as e:
+        return [{"error": str(e)}]
+
+
 def build_report() -> str:
     now = datetime.now(BEIJING)
     L   = []  # output lines
@@ -252,7 +380,7 @@ def build_report() -> str:
     # ════════════════════════════════════════
     # 美股11大板块（全覆盖，SPDR ETF代理）
     # ════════════════════════════════════════
-    L.append("## 美股板块行情（全11板块，SPDR ETF代理）")
+    L.append("## 美股11大板块涨跌幅（以SPDR行业ETF为基准）")
     L.append("| 板块 | ETF | 涨跌幅 | 信号 |")
     L.append("|------|-----|--------|------|")
 
@@ -269,38 +397,26 @@ def build_report() -> str:
     us_sector_results.sort(key=lambda x: abs(x["change_pct"]), reverse=True)
 
     for r in us_sector_results:
-        L.append(f"| {r['sector']} | {r['etf']} | {fmt_chg(r['change_pct'])} | {signal_bar(r['change_pct'])} |")
+        L.append(f"| {cn_sector(r['sector'])} | {r['etf']} | {fmt_chg(r['change_pct'])} | {signal_bar(r['change_pct'])} |")
     L.append("")
 
     # ════════════════════════════════════════
-    # 美股全市场涨跌幅排名（跨板块，与港股结构对称）
+    # 美股涨跌幅排名 — 预定义screener，含sector字段，显示中文板块名
     # ════════════════════════════════════════
-    L.append("## 美股今日涨幅 TOP 15（全市场，跨板块）")
+    L.append("## 美股今日涨幅 TOP 15")
     L.append("| Ticker | 名称 | 涨跌幅 | 板块 | 收盘(USD) |")
     L.append("|--------|------|--------|------|-----------|")
-    gainers_us = yahoo_screener(
-        exchange_filter=["NMS", "NYQ"],
-        n=15, sort_field="percentchange", sort_desc=True,
-        min_mktcap=2_000_000_000,
-    )
-    for q in gainers_us:
-        if "error" in q: break
-        p = parse_quote(q, "us")
-        L.append(f"| {p['code']} | {p['name']} | {fmt_chg(p['change_pct'])} | {p['sector']} | {fmt_price(p['price'],'$')} |")
+    for s in us_movers_yahoo(15, descending=True):
+        if "error" in s: break
+        L.append(f"| {s['code']} | {s['name']} | {fmt_chg(s['change_pct'])} | {cn_sector(s['sector'])} | {fmt_price(s['price'],'$')} |")
     L.append("")
 
-    L.append("## 美股今日跌幅 TOP 10（全市场，跨板块）")
+    L.append("## 美股今日跌幅 TOP 10")
     L.append("| Ticker | 名称 | 涨跌幅 | 板块 | 收盘(USD) |")
     L.append("|--------|------|--------|------|-----------|")
-    losers_us = yahoo_screener(
-        exchange_filter=["NMS", "NYQ"],
-        n=10, sort_field="percentchange", sort_desc=False,
-        min_mktcap=2_000_000_000,
-    )
-    for q in losers_us:
-        if "error" in q: break
-        p = parse_quote(q, "us")
-        L.append(f"| {p['code']} | {p['name']} | {fmt_chg(p['change_pct'])} | {p['sector']} | {fmt_price(p['price'],'$')} |")
+    for s in us_movers_yahoo(10, descending=False):
+        if "error" in s: break
+        L.append(f"| {s['code']} | {s['name']} | {fmt_chg(s['change_pct'])} | {cn_sector(s['sector'])} | {fmt_price(s['price'],'$')} |")
     L.append("")
     time.sleep(0.5)
 
@@ -329,13 +445,9 @@ def build_report() -> str:
     L.append("| 板块 | 平均涨跌幅 | 覆盖股数 | 信号 |")
     L.append("|------|-----------|---------|------|")
 
-    # 一次拉取300只大市值港股，本地按sector分组
-    hk_raw = yahoo_screener(
-        exchange_filter=["HKG"], n=200,
-        sort_field="marketcap", sort_desc=True,
-        min_mktcap=500_000_000,
-    )
-    hk_stocks = [parse_quote(q, "hk") for q in hk_raw if "error" not in q and q.get("symbol","").endswith(".HK")]
+    # HK批量：用预定义screener(most_actives/region=HK)，POST screener不支持exchange=HKG
+    hk_stocks_raw = hk_batch_yahoo(n=150)
+    hk_stocks = [s for s in hk_stocks_raw if "error" not in s]
 
     # 按sector分组
     sector_map = defaultdict(list)
@@ -356,7 +468,7 @@ def build_report() -> str:
     hk_sector_results.sort(key=lambda x: abs(x["avg_change"]), reverse=True)
 
     for sr in hk_sector_results:
-        L.append(f"| {sr['sector']} | {fmt_chg(sr['avg_change'])} | {sr['count']}只 | {signal_bar(sr['avg_change'])} |")
+        L.append(f"| {cn_sector(sr['sector'])} | {fmt_chg(sr['avg_change'])} | {sr['count']}只 | {signal_bar(sr['avg_change'])} |")
     L.append("")
 
     # ════════════════════════════════════════
@@ -365,23 +477,25 @@ def build_report() -> str:
     L.append("## 港股今日涨幅 TOP 20")
     L.append("| 代码 | 名称 | 涨跌幅 | 板块 | 收盘(HKD) |")
     L.append("|------|------|--------|------|-----------|")
-    gainers = sorted(hk_stocks, key=lambda x: x["change_pct"], reverse=True)[:20]
+    gainers = hk_movers_yahoo(20, descending=True)
     for s in gainers:
+        if "error" in s: break
         tq = hk_quote_tencent(s["code"])
-        cn = tq.get("name", s["name"]) if "error" not in tq else s["name"]
-        px = tq.get("price", s["price"]) if "error" not in tq else s["price"]
-        L.append(f"| {s['code']} | {cn} | {fmt_chg(s['change_pct'])} | {s.get('sector','—')} | {fmt_price(px)} |")
+        cn = tq.get("name", s.get("name","")) if "error" not in tq else s.get("name","")
+        px = tq.get("price", s.get("price",0)) if "error" not in tq else s.get("price",0)
+        L.append(f"| {s['code']} | {cn} | {fmt_chg(s['change_pct'])} | {cn_sector(s.get('sector',''))} | {fmt_price(px)} |")
     L.append("")
 
     L.append("## 港股今日跌幅 TOP 10")
     L.append("| 代码 | 名称 | 涨跌幅 | 板块 | 收盘(HKD) |")
     L.append("|------|------|--------|------|-----------|")
-    losers = sorted(hk_stocks, key=lambda x: x["change_pct"])[:10]
+    losers = hk_movers_yahoo(10, descending=False)
     for s in losers:
+        if "error" in s: break
         tq = hk_quote_tencent(s["code"])
-        cn = tq.get("name", s["name"]) if "error" not in tq else s["name"]
-        px = tq.get("price", s["price"]) if "error" not in tq else s["price"]
-        L.append(f"| {s['code']} | {cn} | {fmt_chg(s['change_pct'])} | {s.get('sector','—')} | {fmt_price(px)} |")
+        cn = tq.get("name", s.get("name","")) if "error" not in tq else s.get("name","")
+        px = tq.get("price", s.get("price",0)) if "error" not in tq else s.get("price",0)
+        L.append(f"| {s['code']} | {cn} | {fmt_chg(s['change_pct'])} | {cn_sector(s.get('sector',''))} | {fmt_price(px)} |")
     L.append("")
 
 
@@ -439,7 +553,7 @@ def build_report() -> str:
         for p in sorted(us_movers, key=lambda x: abs(x["change_pct"]), reverse=True):
             if p["code"] in seen: continue
             seen.add(p["code"])
-            L.append(f"| {p['code']} | {p['name']} | {fmt_chg(p['change_pct'])} | {p['sector']} |")
+            L.append(f"| {p['code']} | {p['name']} | {fmt_chg(p['change_pct'])} | {cn_sector(p['sector'])} |")
         L.append("")
 
     # 港股异动（|涨跌|>5%，需核查原因）
