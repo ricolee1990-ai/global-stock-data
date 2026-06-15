@@ -2,18 +2,16 @@ name: 每日市场数据采集
 
 on:
   schedule:
-    - cron: '30 21 * * 0-4'
-  workflow_dispatch:
+    # 北京时间 05:30（UTC 21:30），周一到周五
+    # 此时美股（4PM ET）和港股（4PM HKT）均已收盘
+    - cron: '30 21 * * 0-4'   # UTC周日到周四 = 北京时间周一到周五
 
-permissions:
-  contents: write        # ← 新增这两行，授权bot写入仓库
-
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  workflow_dispatch:            # 允许手动触发（测试用）
 
 jobs:
   fetch:
     runs-on: ubuntu-latest
+
     steps:
       - name: 检出仓库
         uses: actions/checkout@v4
@@ -33,4 +31,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Auto: daily market data ${{ github.run_number }}"
-          file_pattern: "data/daily_latest.md"
+          file_pattern: "data/*.md"
