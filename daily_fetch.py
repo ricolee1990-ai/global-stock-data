@@ -288,15 +288,24 @@ def build_report() -> str:
 # ──────────────────────────────────────────────
 
 if __name__ == "__main__":
-    output_file = "data/daily_latest.md"
-    report = build_report()
-
-    # 写文件（供 GitHub Actions 提交）
     import os
     os.makedirs("data", exist_ok=True)
-    with open(output_file, "w", encoding="utf-8") as f:
+
+    report = build_report()
+
+    # 北京时间日期，用于文件命名
+    beijing_date = datetime.now(BEIJING).strftime("%Y-%m-%d")
+
+    # 1. 带日期的归档文件：data/2026-06-15.md（永久保留，不覆盖）
+    dated_file = f"data/{beijing_date}.md"
+    with open(dated_file, "w", encoding="utf-8") as f:
+        f.write(report)
+
+    # 2. latest 指针：data/daily_latest.md（始终指向最新）
+    latest_file = "data/daily_latest.md"
+    with open(latest_file, "w", encoding="utf-8") as f:
         f.write(report)
 
     # 同时打印到 stdout（本地调试用）
     print(report)
-    print(f"\n✅ 已写入 {output_file}", file=sys.stderr)
+    print(f"\n✅ 已写入 {dated_file} 和 {latest_file}", file=sys.stderr)
