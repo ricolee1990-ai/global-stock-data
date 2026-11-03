@@ -1,71 +1,71 @@
 # 海外市场数据快照
-**采集时间（北京时间）：2026-11-02 08:56**
+**采集时间（北京时间）：2026-11-03 10:59**
 > 数据说明：北京时间05:30后采集，港股/美股均已收盘，价格为前日收盘价。
 
 ## 美股基准指数
 | 指数 | 收盘 | 涨跌幅 | 日期 |
 |------|------|--------|------|
-| 标普500 | 7,580.07 | -1.82% | 2026-10-30 |
-| 纳斯达克100 | 28,385 | -3.46% | 2026-10-30 |
-| 纳斯达克综合 | 25,437 | -2.86% | 2026-10-30 |
-| 道琼斯 | 51,770 | -1.09% | 2026-10-30 |
-| VIX恐慌指数 | 19.42 | +12.91% | 2026-10-30 |
-| 10Y美债(%) | 4.93 | -1.20% | 2026-10-30 |
+| 标普500 | 7,541.40 | -0.51% | 2026-11-02 |
+| 纳斯达克100 | 27,990 | -1.39% | 2026-11-02 |
+| 纳斯达克综合 | 25,164 | -1.07% | 2026-11-02 |
+| 道琼斯 | 51,984 | +0.41% | 2026-11-02 |
+| VIX恐慌指数 | 21.15 | +8.91% | 2026-11-02 |
+| 10Y美债(%) | 4.89 | -0.71% | 2026-11-02 |
 
 ## 美股11大板块涨跌幅（以SPDR行业ETF为基准）
 | 板块 | ETF | 涨跌幅 | 信号 |
 |------|-----|--------|------|
-| 科技 | XLK | -4.89% | 弱势 |
-| 能源 | XLE | +1.91% | 偏强 |
-| 工业 | XLI | -1.60% | 偏弱 |
-| 必需消费 | XLP | +1.41% | 偏强 |
-| 通信服务 | XLC | -1.29% | 偏弱 |
-| 金融服务 | XLF | -0.76% | 平稳 |
-| 非必需消费 | XLY | -0.71% | 平稳 |
-| 公用事业 | XLU | +0.67% | 平稳 |
-| 医疗保健 | XLV | +0.45% | 平稳 |
-| 原材料 | XLB | +0.40% | 平稳 |
-| 房地产 | XLRE | +0.26% | 平稳 |
+| 能源 | XLE | -3.96% | 弱势 |
+| 科技 | XLK | -2.95% | 偏弱 |
+| 非必需消费 | XLY | +2.41% | 偏强 |
+| 金融服务 | XLF | +1.86% | 偏强 |
+| 原材料 | XLB | +1.76% | 偏强 |
+| 必需消费 | XLP | +1.58% | 偏强 |
+| 工业 | XLI | +1.38% | 偏强 |
+| 房地产 | XLRE | +1.09% | 偏强 |
+| 公用事业 | XLU | +0.55% | 平稳 |
+| 通信服务 | XLC | +0.36% | 平稳 |
+| 医疗保健 | XLV | -0.15% | 平稳 |
 
 ## 美股今日涨幅 TOP 15
 | Ticker | 名称 | 涨跌幅 | 板块 | 收盘(USD) |
 |--------|------|--------|------|-----------|
-| CDNA | CareDx, Inc. | +22.22% | — | $87.41 |
-| FDXF | FedEx Freight Ho | +14.91% | — | $126.04 |
-| MEOH | Methanex Corpora | +14.04% | — | $71.57 |
-| REGN | Regeneron Pharma | +13.33% | — | $927.89 |
-| CVCO | Cavco Industries | +13.11% | — | $619.00 |
-| GPN | Global Payments  | +12.97% | — | $96.84 |
-| BTSG | BrightSpring Hea | +11.08% | — | $66.89 |
-| GDDY | GoDaddy Inc. | +10.72% | — | $117.24 |
-| OLN | Olin Corporation | +9.66% | — | $17.60 |
-| INTA | Intapp, Inc. | +7.95% | — | $42.21 |
-| CDLR | Cadeler A/S | +7.76% | — | $28.76 |
-| HGV | Hilton Grand Vac | +7.64% | — | $38.44 |
-| RKT | Rocket Companies | +7.38% | — | $12.80 |
-| MHK | Mohawk Industrie | +7.25% | — | $139.41 |
-| CSGP | CoStar Group, In | +7.21% | — | $30.17 |
+| IDXX | IDEXX Laboratori | +21.85% | — | $671.64 |
+| NWL | Newell Brands In | +15.06% | — | $5.96 |
+| NXT | Nextpower Inc. | +14.87% | — | $91.13 |
+| PHIN | PHINIA Inc. | +12.51% | — | $70.79 |
+| SFM | Sprouts Farmers  | +11.13% | — | $55.23 |
+| SAM | Boston Beer Comp | +9.96% | — | $221.37 |
+| AIN | Albany Internati | +9.66% | — | $73.47 |
+| MGRC | McGrath RentCorp | +9.44% | — | $129.44 |
+| ESAB | ESAB Corporation | +9.38% | — | $76.30 |
+| LOAR | Loar Holdings In | +9.34% | — | $67.91 |
+| NSP | Insperity, Inc. | +9.24% | — | $53.18 |
+| WING | Wingstop Inc. | +8.89% | — | $163.04 |
+| ENPH | Enphase Energy,  | +8.89% | — | $27.93 |
+| TEM | Tempus AI, Inc. | +8.67% | — | $78.48 |
+| RIVN | Rivian Automotiv | +8.47% | — | $13.19 |
 
 ## 美股今日跌幅 TOP 10
 | Ticker | 名称 | 涨跌幅 | 板块 | 收盘(USD) |
 |--------|------|--------|------|-----------|
-| RDDT | Reddit, Inc. | -29.22% | — | $91.73 |
-| INTC | Intel Corporatio | -28.58% | — | $65.76 |
-| CACC | Credit Acceptanc | -19.26% | — | $464.89 |
-| ILMN | Illumina, Inc. | -18.64% | — | $235.99 |
-| RBLX | Roblox Corporati | -18.05% | — | $42.99 |
-| BFAM | Bright Horizons  | -17.92% | — | $54.98 |
-| TFII | TFI Internationa | -17.08% | — | $93.32 |
-| BLSH | Bullish | -16.05% | — | $23.90 |
-| AUGO | Aura Minerals In | -15.43% | — | $66.22 |
-| TWLO | Twilio Inc. | -15.24% | — | $205.03 |
+| LITE | Lumentum Holding | -18.59% | — | $684.40 |
+| TWST | Twist Bioscience | -15.54% | — | $129.04 |
+| LBRT | Liberty Energy I | -13.03% | — | $14.68 |
+| VG | Venture Global,  | -12.98% | — | $12.87 |
+| MRVL | Marvell Technolo | -12.72% | — | $171.41 |
+| AXTI | AXT Inc | -12.46% | — | $48.20 |
+| TXG | 10x Genomics, In | -12.10% | — | $61.63 |
+| PURR | Hyperliquid Stra | -11.81% | — | $9.71 |
+| CBRS | Cerebras Systems | -11.74% | — | $96.36 |
+| PTEN | Patterson-UTI En | -11.55% | — | $11.78 |
 
 ## 港股基准指数
 | 指数 | 收盘 | 涨跌幅 | 日期 |
 |------|------|--------|------|
-| 恒生指数 | 23,294 | +1.46% | 2026-10-30 |
-| 国企指数(H股) | 7,862.22 | +1.37% | 2026-10-30 |
-| 恒生科技指数 | 3,706.30 | +0.29% | 2026-11-01(Sina) |
+| 恒生指数 | 23,494 | +0.43% | 2026-11-03 |
+| 国企指数(H股) | 7,922.10 | +0.20% | 2026-11-03 |
+| 恒生科技指数 | 3,839.45 | +1.11% | 2026-11-02(Sina) |
 
 ## 港股板块行情（全11板块，按平均涨跌幅排序）
 | 板块 | 平均涨跌幅 | 覆盖股数 | 信号 |
@@ -82,13 +82,13 @@
 ## 黄金 / 美元 / 原油 / 加密货币
 | 品种 | 最新价 | 涨跌幅 | 日期 |
 |------|--------|--------|------|
-| COMEX黄金 (USD/oz) | 3,905.70 USD | +0.17% | 2026-11-02 |
-| 白银 (USD/oz) | 49.78 USD | +1.39% | 2026-11-02 |
-| 美元指数 DXY | 101.97 USD | +0.09% | 2026-11-02 |
-| WTI原油 (USD/bbl) | 102.43 USD | -1.62% | 2026-11-02 |
-| 布伦特原油 (USD/bbl) | 111.86 USD | -4.91% | 2026-11-02 |
-| 比特币 BTC | 78,009 USD | +0.74% | 2026-11-02 |
-| 以太坊 ETH | 2,268.88 USD | +0.72% | 2026-11-02 |
+| COMEX黄金 (USD/oz) | 3,956.10 USD | +1.47% | 2026-11-03 |
+| 白银 (USD/oz) | 50.19 USD | +2.22% | 2026-11-03 |
+| 美元指数 DXY | 101.83 USD | +0.08% | 2026-11-03 |
+| WTI原油 (USD/bbl) | 96.81 USD | -7.02% | 2026-11-03 |
+| 布伦特原油 (USD/bbl) | 105.02 USD | -10.73% | 2026-11-03 |
+| 比特币 BTC | 76,590 USD | -2.12% | 2026-11-03 |
+| 以太坊 ETH | 2,247.85 USD | -1.11% | 2026-11-03 |
 
 ---
 ## [内部分析信号] 仅供Claude核查催化剂，不出现在日报正文
@@ -96,95 +96,130 @@
 ### 美股异动个股（大市值，|涨跌|≥5%，需核查催化剂）
 | Ticker | 名称 | 涨跌幅 | 板块 |
 |--------|------|--------|------|
-| RDDT | Reddit, Inc. | -29.22% | — |
-| INTC | Intel Corporati | -28.58% | — |
-| ILMN | Illumina, Inc. | -18.64% | — |
-| RBLX | Roblox Corporat | -18.05% | — |
-| TFII | TFI Internation | -17.08% | — |
-| AUGO | Aura Minerals I | -15.43% | — |
-| TWLO | Twilio Inc. | -15.24% | — |
-| FDXF | FedEx Freight H | +14.91% | — |
-| MEOH | Methanex Corpor | +14.04% | — |
-| TXG | 10x Genomics, I | -14.03% | — |
-| SNDK | Sandisk Corpora | -13.47% | — |
-| REGN | Regeneron Pharm | +13.33% | — |
-| GPN | Global Payments | +12.97% | — |
-| AAOI | Applied Optoele | -12.80% | — |
-| TWST | Twist Bioscienc | -11.92% | — |
-| GLXY | Galaxy Digital  | -11.75% | — |
-| DDOG | Datadog, Inc. | -11.50% | — |
-| TSEM | Tower Semicondu | -11.41% | — |
-| COHR | Coherent Corp. | -11.34% | — |
-| ASX | ASE Technology  | -11.34% | — |
-| QCOM | QUALCOMM Incorp | -11.12% | — |
-| BTSG | BrightSpring He | +11.08% | — |
-| ALAB | Astera Labs, In | -10.93% | — |
-| AMD | Advanced Micro  | -10.88% | — |
-| DELL | Dell Technologi | -10.77% | — |
-| GDDY | GoDaddy Inc. | +10.72% | — |
-| COIN | Coinbase Global | -10.62% | — |
-| HUT | Hut 8 Corp. | -10.60% | — |
-| SXT | Sensient Techno | -10.57% | — |
-| AAON | AAON, Inc. | -10.49% | — |
-| NBIS | Nebius Group N. | -10.38% | — |
-| APP | Applovin Corpor | -10.36% | — |
-| DOCN | DigitalOcean Ho | -10.32% | — |
-| VIAV | Viavi Solutions | -10.20% | — |
-| FORM | FormFactor, Inc | -10.19% | — |
-| MRVL | Marvell Technol | -10.05% | — |
-| ARM | Arm Holdings pl | -9.97% | — |
-| GRAL | GRAIL, Inc. | -9.75% | — |
-| LSCC | Lattice Semicon | -9.74% | — |
-| CRWV | CoreWeave, Inc. | -9.66% | — |
-| HPQ | HP Inc. | -9.58% | — |
-| SMTC | Semtech Corpora | -9.56% | — |
-| NET | Cloudflare, Inc | -9.54% | — |
-| CRCL | Circle Internet | -9.31% | — |
-| GTES | Gates Industria | -9.22% | — |
-| ONTO | Onto Innovation | -9.16% | — |
-| RMD | ResMed Inc. | -9.05% | — |
-| NWG | NatWest Group p | -9.00% | — |
-| FPS | Forgent Power S | -8.96% | — |
-| NVT | nVent Electric  | -8.81% | — |
-| NTAP | NetApp, Inc. | -8.81% | — |
-| IREN | IREN LIMITED | -8.76% | — |
-| CRDO | Credo Technolog | -8.65% | — |
-| GFS | GlobalFoundries | -8.62% | — |
-| BE | Bloom Energy Co | -8.61% | — |
-| LITE | Lumentum Holdin | -8.57% | — |
-| SITM | SiTime Corporat | -8.40% | — |
-| SIMO | Silicon Motion  | -8.39% | — |
-| ANET | Arista Networks | -8.34% | — |
-| MDB | MongoDB, Inc. | -8.31% | — |
-| CIEN | Ciena Corporati | -8.22% | — |
-| APLD | Applied Digital | -8.22% | — |
-| HMY | Harmony Gold Mi | -8.14% | — |
-| NOK | Nokia Corporati | -8.06% | — |
-| WULF | TeraWulf Inc. | -8.00% | — |
-| STX | Seagate Technol | -7.98% | — |
-| IESC | IES Holdings, I | -7.97% | — |
-| BRKR | Bruker Corporat | -7.95% | — |
-| SKHY | SK hynix Inc. | -7.95% | — |
-| CAMT | Camtek Ltd. | -7.89% | — |
-| CCJ | Cameco Corporat | -7.88% | — |
-| MSTR | Strategy Inc | -7.84% | — |
-| RKT | Rocket Companie | +7.38% | — |
-| MHK | Mohawk Industri | +7.25% | — |
-| CSGP | CoStar Group, I | +7.21% | — |
-| AZN | AstraZeneca PLC | +7.02% | — |
-| CBOE | Cboe Global Mar | +6.77% | — |
-| VLTO | Veralto Corp | +6.77% | — |
-| SPOT | Spotify Technol | +6.50% | — |
-| TMUS | T-Mobile US, In | +6.21% | — |
-| RIVN | Rivian Automoti | +6.20% | — |
-| AN | AutoNation, Inc | +6.08% | — |
-| BBIO | BridgeBio Pharm | +5.97% | — |
-| IMO | Imperial Oil Li | +5.52% | — |
-| TYL | Tyler Technolog | +5.45% | — |
-| TGTX | TG Therapeutics | +5.34% | — |
-| MICC | The Magnum Ice  | +5.30% | — |
-| BAH | Booz Allen Hami | +5.06% | — |
-| ATR | AptarGroup, Inc | +5.02% | — |
-| LYB | LyondellBasell  | +5.00% | — |
+| IDXX | IDEXX Laborator | +21.85% | — |
+| LITE | Lumentum Holdin | -18.59% | — |
+| TWST | Twist Bioscienc | -15.54% | — |
+| NXT | Nextpower Inc. | +14.87% | — |
+| VG | Venture Global, | -12.98% | — |
+| MRVL | Marvell Technol | -12.72% | — |
+| TXG | 10x Genomics, I | -12.10% | — |
+| CBRS | Cerebras System | -11.74% | — |
+| CIEN | Ciena Corporati | -11.34% | — |
+| ASTS | AST SpaceMobile | -11.33% | — |
+| OKTA | Okta, Inc. | -11.22% | — |
+| ALAB | Astera Labs, In | -11.22% | — |
+| SFM | Sprouts Farmers | +11.13% | — |
+| KRYS | Krystal Biotech | -10.95% | — |
+| P | Everpure, Inc. | -10.40% | — |
+| RIG | Transocean Ltd  | -10.23% | — |
+| VAL | Valaris Limited | -10.08% | — |
+| SIMO | Silicon Motion  | -9.94% | — |
+| FROG | JFrog Ltd. | -9.83% | — |
+| AAOI | Applied Optoele | -9.49% | — |
+| NTSK | Netskope, Inc. | -9.47% | — |
+| LOAR | Loar Holdings I | +9.34% | — |
+| MXL | MaxLinear, Inc | -9.10% | — |
+| SAIL | SailPoint, Inc. | -8.88% | — |
+| HIMS | Hims & Hers Hea | -8.82% | — |
+| GLXY | Galaxy Digital  | -8.81% | — |
+| INTC | Intel Corporati | -8.80% | — |
+| ORCL | Oracle Corporat | -8.76% | — |
+| TEM | Tempus AI, Inc. | +8.67% | — |
+| MUR | Murphy Oil Corp | -8.62% | — |
+| CRWV | CoreWeave, Inc. | -8.60% | — |
+| NTRA | Natera, Inc. | -8.54% | — |
+| RIVN | Rivian Automoti | +8.47% | — |
+| FRO | Frontline Plc | -8.47% | — |
+| VICR | Vicor Corporati | -8.44% | — |
+| MTDR | Matador Resourc | -8.41% | — |
+| NBIS | Nebius Group N. | -8.27% | — |
+| KVYO | Klaviyo, Inc. S | +8.24% | — |
+| SSL | Sasol Ltd. | -8.19% | — |
+| DDOG | Datadog, Inc. | -8.15% | — |
+| IREN | IREN LIMITED | -8.06% | — |
+| CIGI | Colliers Intern | +7.97% | — |
+| S | SentinelOne, In | -7.91% | — |
+| STX | Seagate Technol | -7.88% | — |
+| TAP | Molson Coors Be | +7.75% | — |
+| SMMT | Summit Therapeu | -7.67% | — |
+| TTMI | TTM Technologie | -7.67% | — |
+| RBRK | Rubrik, Inc. | -7.64% | — |
+| SMCI | Super Micro Com | -7.62% | — |
+| ROAD | Construction Pa | +7.58% | — |
+| RKT | Rocket Companie | +7.58% | — |
+| APA | APA Corporation | -7.57% | — |
+| AMD | Advanced Micro  | -7.52% | — |
+| WDC | Western Digital | -7.52% | — |
+| SEI | Solaris Energy  | -7.50% | — |
+| SARO | StandardAero, I | +7.49% | — |
+| DELL | Dell Technologi | -7.43% | — |
+| HUT | Hut 8 Corp. | -7.40% | — |
+| LKQ | LKQ Corporation | +7.38% | — |
+| QLYS | Qualys, Inc. | -7.37% | — |
+| SM | SM Energy Compa | -7.28% | — |
+| MANE | Veradermics, In | -7.27% | — |
+| CRDO | Credo Technolog | -7.27% | — |
+| FTNT | Fortinet, Inc. | -7.25% | — |
+| CAMT | Camtek Ltd. | -7.22% | — |
+| NE | Noble Corporati | -7.22% | — |
+| CVCO | Cavco Industrie | +7.09% | — |
+| VIAV | Viavi Solutions | -7.09% | — |
+| HPE | Hewlett Packard | -7.08% | — |
+| NTAP | NetApp, Inc. | -6.99% | — |
+| CHKP | Check Point Sof | -6.98% | — |
+| HWM | Howmet Aerospac | +6.91% | — |
+| FCFS | FirstCash Holdi | +6.87% | — |
+| EQNR | Equinor ASA | -6.87% | — |
+| DVN | Devon Energy Co | -6.75% | — |
+| GRAL | GRAIL, Inc. | -6.74% | — |
+| WULF | TeraWulf Inc. | -6.73% | — |
+| CHH | Choice Hotels I | +6.70% | — |
+| TSEM | Tower Semicondu | -6.70% | — |
+| YPF | YPF Sociedad An | -6.70% | — |
+| OVV | Ovintiv Inc. (D | -6.66% | — |
+| BAM | Brookfield Asse | +6.65% | — |
+| SNDK | Sandisk Corpora | -6.59% | — |
+| MHK | Mohawk Industri | +6.58% | — |
+| BILI | Bilibili Inc. | +6.55% | — |
+| CPA | Copa Holdings,  | +6.53% | — |
+| SITM | SiTime Corporat | -6.52% | — |
+| AKAM | Akamai Technolo | -6.50% | — |
+| CAI | Caris Life Scie | -6.50% | — |
+| PNR | Pentair plc. | +6.49% | — |
+| EXP | Eagle Materials | +6.47% | — |
+| TRGP | Targa Resources | -6.43% | — |
+| AMKR | Amkor Technolog | -6.43% | — |
+| CRH | CRH PLC | +6.36% | — |
+| BIRK | Birkenstock Hol | +6.31% | — |
+| DASH | DoorDash, Inc. | +6.19% | — |
+| FLUT | Flutter Enterta | +6.14% | — |
+| CBRE | CBRE Group Inc | +6.13% | — |
+| HLI | Houlihan Lokey, | +6.12% | — |
+| CPRT | Copart, Inc. | +5.97% | — |
+| VFC | V.F. Corporatio | +5.96% | — |
+| TME | Tencent Music E | +5.95% | — |
+| SHW | Sherwin-William | +5.94% | — |
+| ARE | Alexandria Real | +5.90% | — |
+| XPEV | XPeng Inc. | +5.86% | — |
+| CWEN | Clearway Energy | +5.84% | — |
+| TDG | Transdigm Group | +5.83% | — |
+| QXO | QXO, Inc. | +5.80% | — |
+| BYD | Boyd Gaming Cor | +5.78% | — |
+| CAVA | CAVA Group, Inc | +5.63% | — |
+| GFI | Gold Fields Lim | +5.62% | — |
+| FTAI | FTAI Aviation L | +5.60% | — |
+| BSX | Boston Scientif | +5.57% | — |
+| BN | Brookfield Corp | +5.55% | — |
+| MORN | Morningstar, In | +5.54% | — |
+| TOST | Toast, Inc. | +5.49% | — |
+| STN | Stantec Inc | +5.49% | — |
+| CSGP | CoStar Group, I | +5.47% | — |
+| LTM | LATAM Airlines  | +5.45% | — |
+| APPF | AppFolio, Inc. | +5.44% | — |
+| CVNA | Carvana Co. | +5.43% | — |
+| BNT | Brookfield Weal | +5.43% | — |
+| JLL | Jones Lang LaSa | +5.42% | — |
+| HEI-A | Heico Corporati | +5.39% | — |
+| EGO | Eldorado Gold C | +5.36% | — |
 
-*由 GitHub Actions 自动生成 · 2026-11-02 08:56 北京时间*
+*由 GitHub Actions 自动生成 · 2026-11-03 10:59 北京时间*
