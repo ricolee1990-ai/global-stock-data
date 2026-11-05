@@ -1,71 +1,71 @@
 # 海外市场数据快照
-**采集时间（北京时间）：2026-11-04 09:31**
+**采集时间（北京时间）：2026-11-05 09:35**
 > 数据说明：北京时间05:30后采集，港股/美股均已收盘，价格为前日收盘价。
 
 ## 美股基准指数
 | 指数 | 收盘 | 涨跌幅 | 日期 |
 |------|------|--------|------|
-| 标普500 | 7,568.92 | +0.36% | 2026-11-03 |
-| 纳斯达克100 | 28,180 | +0.68% | 2026-11-03 |
-| 纳斯达克综合 | 25,372 | +0.83% | 2026-11-03 |
-| 道琼斯 | 51,787 | -0.38% | 2026-11-03 |
-| VIX恐慌指数 | 20.83 | -1.51% | 2026-11-03 |
-| 10Y美债(%) | 4.95 | +1.19% | 2026-11-03 |
+| 标普500 | 7,688.62 | +1.58% | 2026-11-04 |
+| 纳斯达克100 | 28,437 | +0.91% | 2026-11-04 |
+| 纳斯达克综合 | 25,737 | +1.44% | 2026-11-04 |
+| 道琼斯 | 53,356 | +3.03% | 2026-11-04 |
+| VIX恐慌指数 | 16.61 | -20.26% | 2026-11-04 |
+| 10Y美债(%) | 4.89 | -1.17% | 2026-11-04 |
 
 ## 美股11大板块涨跌幅（以SPDR行业ETF为基准）
 | 板块 | ETF | 涨跌幅 | 信号 |
 |------|-----|--------|------|
-| 能源 | XLE | -3.96% | 弱势 |
-| 科技 | XLK | -2.95% | 偏弱 |
-| 非必需消费 | XLY | +2.41% | 偏强 |
-| 金融服务 | XLF | +1.86% | 偏强 |
-| 原材料 | XLB | +1.76% | 偏强 |
-| 必需消费 | XLP | +1.58% | 偏强 |
-| 工业 | XLI | +1.38% | 偏强 |
-| 房地产 | XLRE | +1.09% | 偏强 |
-| 公用事业 | XLU | +0.55% | 平稳 |
-| 通信服务 | XLC | +0.36% | 平稳 |
-| 医疗保健 | XLV | -0.15% | 平稳 |
+| 必需消费 | XLP | -2.07% | 偏弱 |
+| 原材料 | XLB | -2.01% | 偏弱 |
+| 科技 | XLK | +1.31% | 偏强 |
+| 通信服务 | XLC | +1.18% | 偏强 |
+| 工业 | XLI | +0.95% | 平稳 |
+| 能源 | XLE | -0.85% | 平稳 |
+| 非必需消费 | XLY | -0.70% | 平稳 |
+| 金融服务 | XLF | -0.64% | 平稳 |
+| 公用事业 | XLU | -0.57% | 平稳 |
+| 医疗保健 | XLV | -0.31% | 平稳 |
+| 房地产 | XLRE | +0.07% | 平稳 |
 
 ## 美股今日涨幅 TOP 15
 | Ticker | 名称 | 涨跌幅 | 板块 | 收盘(USD) |
 |--------|------|--------|------|-----------|
-| AEHR | Aehr Test System | +26.50% | — | $65.11 |
-| GPK | Graphic Packagin | +21.22% | — | $11.31 |
-| RIOT | Riot Platforms,  | +18.41% | — | $14.02 |
-| CIFR | Cipher Digital I | +18.37% | — | $8.12 |
-| XMTR | Xometry, Inc. | +16.55% | — | $111.29 |
-| BETA | Beta Technologie | +16.00% | — | $23.64 |
-| HUT | Hut 8 Corp. | +15.90% | — | $63.75 |
-| FN | Fabrinet | +15.45% | — | $363.33 |
-| GLXY | Galaxy Digital I | +15.35% | — | $16.83 |
-| WULF | TeraWulf Inc. | +14.53% | — | $12.53 |
-| CLSK | CleanSpark, Inc. | +13.99% | — | $8.15 |
-| CORZ | Core Scientific, | +13.87% | — | $14.24 |
-| NBIX | Neurocrine Biosc | +13.42% | — | $164.85 |
-| FRVO | Fervo Energy Com | +12.97% | — | $9.32 |
-| FISV | Fiserv, Inc. | +12.46% | — | $58.40 |
+| KD | Kyndryl Holdings | +30.14% | — | $16.84 |
+| RYTM | Rhythm Pharmaceu | +28.04% | — | $110.68 |
+| DUOL | Duolingo, Inc. | +25.99% | — | $161.27 |
+| YOU | Clear Secure, In | +23.70% | — | $59.08 |
+| PCOR | Procore Technolo | +19.68% | — | $75.60 |
+| MDLN | Medline Inc. | +18.36% | — | $40.35 |
+| LIVN | LivaNova PLC | +17.88% | — | $94.19 |
+| UFPT | UFP Technologies | +17.66% | — | $329.82 |
+| MOS | Mosaic Company ( | +17.37% | — | $21.62 |
+| OUST | Ouster, Inc. | +15.73% | — | $33.54 |
+| VRDN | Viridian Therape | +15.53% | — | $29.05 |
+| XYZ | Block, Inc. | +15.30% | — | $87.63 |
+| XNCR | Xencor, Inc. | +14.33% | — | $35.03 |
+| TREX | Trex Company, In | +14.30% | — | $57.15 |
+| FLYW | Flywire Corporat | +13.89% | — | $21.81 |
 
 ## 美股今日跌幅 TOP 10
 | Ticker | 名称 | 涨跌幅 | 板块 | 收盘(USD) |
 |--------|------|--------|------|-----------|
-| STVN | Stevanato Group  | -28.57% | — | $14.10 |
-| DT | Dynatrace, Inc. | -14.69% | — | $47.03 |
-| IT | Gartner, Inc. | -13.19% | — | $204.22 |
-| CVI | CVR Energy Inc. | -13.09% | — | $48.60 |
-| PAY | Paymentus Holdin | -11.50% | — | $31.02 |
-| LIND | Lindblad Expedit | -10.64% | — | $32.76 |
-| TRI | Thomson Reuters  | -9.87% | — | $110.18 |
-| SHC | Sotera Health Co | -9.64% | — | $16.03 |
-| SYY | Sysco Corporatio | -9.33% | — | $74.11 |
-| OTTR | Otter Tail Corpo | -8.85% | — | $83.41 |
+| DOX | Amdocs Limited | -30.07% | — | $43.66 |
+| ECG | Everus Construct | -29.29% | — | $79.71 |
+| FIS | Fidelity Nationa | -23.67% | — | $29.76 |
+| HUT | Hut 8 Corp. | -23.23% | — | $48.94 |
+| STRL | Sterling Infrast | -21.46% | — | $283.66 |
+| MOD | Modine Manufactu | -21.43% | — | $98.56 |
+| CIFR | Cipher Digital I | -19.95% | — | $6.50 |
+| INIO | INNIO N.V. | -19.50% | — | $14.74 |
+| LGN | Legence Corp. | -17.95% | — | $32.13 |
+| UNM | Unum Group | -17.84% | — | $74.79 |
 
 ## 港股基准指数
 | 指数 | 收盘 | 涨跌幅 | 日期 |
 |------|------|--------|------|
-| 恒生指数 | 23,393 | +0.42% | 2026-11-02 |
-| 国企指数(H股) | 7,906.11 | +0.56% | 2026-11-02 |
-| 恒生科技指数 | N/A | +0.00% | 2026-11-03(Sina) |
+| 恒生指数 | 23,526 | +0.57% | 2026-11-03 |
+| 国企指数(H股) | 7,943.10 | +0.47% | 2026-11-03 |
+| 恒生科技指数 | N/A | +0.00% | 2026-11-04(Sina) |
 
 ## 港股板块行情（全11板块，按平均涨跌幅排序）
 | 板块 | 平均涨跌幅 | 覆盖股数 | 信号 |
@@ -82,13 +82,13 @@
 ## 黄金 / 美元 / 原油 / 加密货币
 | 品种 | 最新价 | 涨跌幅 | 日期 |
 |------|--------|--------|------|
-| COMEX黄金 (USD/oz) | 3,963.30 USD | -0.16% | 2026-11-04 |
-| 白银 (USD/oz) | 50.04 USD | -1.33% | 2026-11-04 |
-| 美元指数 DXY | 101.44 USD | -0.30% | 2026-11-04 |
-| WTI原油 (USD/bbl) | 96.23 USD | -0.24% | 2026-11-04 |
-| 布伦特原油 (USD/bbl) | 103.99 USD | -0.74% | 2026-11-04 |
-| 比特币 BTC | 76,798 USD | +0.16% | 2026-11-04 |
-| 以太坊 ETH | 2,259.28 USD | +0.46% | 2026-11-04 |
+| COMEX黄金 (USD/oz) | 4,119.90 USD | +1.15% | 2026-11-05 |
+| 白银 (USD/oz) | 52.82 USD | +6.52% | 2026-11-05 |
+| 美元指数 DXY | 101.32 USD | -0.54% | 2026-11-05 |
+| WTI原油 (USD/bbl) | 87.18 USD | -1.07% | 2026-11-05 |
+| 布伦特原油 (USD/bbl) | 93.78 USD | -9.48% | 2026-11-05 |
+| 比特币 BTC | 80,481 USD | +4.05% | 2026-11-05 |
+| 以太坊 ETH | 2,420.37 USD | +6.50% | 2026-11-05 |
 
 ---
 ## [内部分析信号] 仅供Claude核查催化剂，不出现在日报正文
@@ -96,101 +96,127 @@
 ### 美股异动个股（大市值，|涨跌|≥5%，需核查催化剂）
 | Ticker | 名称 | 涨跌幅 | 板块 |
 |--------|------|--------|------|
-| RIOT | Riot Platforms, | +18.41% | — |
-| XMTR | Xometry, Inc. | +16.55% | — |
-| BETA | Beta Technologi | +16.00% | — |
-| HUT | Hut 8 Corp. | +15.90% | — |
-| FN | Fabrinet | +15.45% | — |
-| GLXY | Galaxy Digital  | +15.35% | — |
-| DT | Dynatrace, Inc. | -14.69% | — |
-| WULF | TeraWulf Inc. | +14.53% | — |
-| NBIX | Neurocrine Bios | +13.42% | — |
-| IT | Gartner, Inc. | -13.19% | — |
-| FISV | Fiserv, Inc. | +12.46% | — |
-| PTCT | PTC Therapeutic | +11.89% | — |
-| RRX | Regal Rexnord C | +11.81% | — |
-| MWH | SOLV Energy, In | +11.71% | — |
-| INIO | INNIO N.V. | +11.58% | — |
-| IREN | IREN LIMITED | +11.08% | — |
-| LSCC | Lattice Semicon | +10.98% | — |
-| FORM | FormFactor, Inc | +10.87% | — |
-| TBBB | BBB Foods Inc. | +10.53% | — |
-| FPS | Forgent Power S | +10.50% | — |
-| TRI | Thomson Reuters | -9.87% | — |
-| APLD | Applied Digital | +9.80% | — |
-| AEIS | Advanced Energy | +9.63% | — |
-| ECG | Everus Construc | +9.46% | — |
-| SYY | Sysco Corporati | -9.33% | — |
-| BE | Bloom Energy Co | +9.05% | — |
-| ZBRA | Zebra Technolog | -8.76% | — |
-| SHOP | Shopify Inc. | -8.74% | — |
-| TWST | Twist Bioscienc | +8.73% | — |
-| DD | DuPont de Nemou | +8.61% | — |
-| MTCH | Match Group, In | -8.49% | — |
-| VIAV | Viavi Solutions | +8.09% | — |
-| MDGL | Madrigal Pharma | -8.08% | — |
-| RVTY | Revvity, Inc. | +7.84% | — |
-| CRDO | Credo Technolog | +7.78% | — |
-| STRL | Sterling Infras | +7.66% | — |
-| LGN | Legence Corp. | +7.55% | — |
-| RAL | Ralliant Corpor | +7.54% | — |
-| RYTM | Rhythm Pharmace | -7.49% | — |
-| MAIR | Madison Air Sol | +7.48% | — |
-| SIMO | Silicon Motion  | +7.45% | — |
-| TLN | Talen Energy Co | +7.29% | — |
-| APP | Applovin Corpor | +7.28% | — |
-| NBIS | Nebius Group N. | +7.25% | — |
-| CRWV | CoreWeave, Inc. | +7.16% | — |
-| BALL | Ball Corporatio | -7.14% | — |
-| JAZZ | Jazz Pharmaceut | +7.13% | — |
-| FIX | Comfort Systems | +7.08% | — |
-| ETN | Eaton Corporati | +7.00% | — |
-| ULS | UL Solutions In | +7.00% | — |
-| FOXA | Fox Corporation | +6.92% | — |
-| ADM | Archer-Daniels- | -6.82% | — |
-| MPWR | Monolithic Powe | +6.78% | — |
-| SMMT | Summit Therapeu | +6.76% | — |
-| MSA | MSA Safety Inco | -6.64% | — |
-| TTMI | TTM Technologie | +6.59% | — |
-| FOX | Fox Corporation | +6.56% | — |
-| LDOS | Leidos Holdings | -6.55% | — |
-| APTV | Aptiv PLC | -6.53% | — |
-| GEV | GE Vernova Inc. | +6.49% | — |
-| IONQ | IonQ, Inc. | +6.46% | — |
-| SITM | SiTime Corporat | +6.46% | — |
-| OC | Owens Corning I | -6.23% | — |
-| BLDR | Builders FirstS | -6.21% | — |
-| SEI | Solaris Energy  | +6.07% | — |
-| POWL | Powell Industri | +6.06% | — |
-| NPO | Enpro Inc. | +6.06% | — |
-| RBLX | Roblox Corporat | +5.99% | — |
-| MTSI | MACOM Technolog | +5.99% | — |
-| DDS | Dillard's, Inc. | -5.96% | — |
-| TXG | 10x Genomics, I | +5.94% | — |
-| ORCL | Oracle Corporat | +5.85% | — |
-| PWR | Quanta Services | +5.77% | — |
-| ONTO | Onto Innovation | +5.74% | — |
-| RDDT | Reddit, Inc. | +5.69% | — |
-| KDP | Keurig Dr Peppe | -5.65% | — |
-| CIEN | Ciena Corporati | +5.54% | — |
-| COIN | Coinbase Global | +5.53% | — |
-| APH | Amphenol Corpor | +5.45% | — |
-| NICE | NICE Ltd | -5.45% | — |
-| LEN | Lennar Corporat | -5.42% | — |
-| BTSG | BrightSpring He | +5.40% | — |
-| KMX | CarMax Inc | -5.39% | — |
-| NXT | Nextpower Inc. | +5.37% | — |
-| DUOL | Duolingo, Inc. | -5.37% | — |
-| LEN-B | Lennar Corporat | -5.35% | — |
-| RIG | Transocean Ltd  | -5.30% | — |
-| FIG | Figma, Inc. | -5.27% | — |
-| DRS | Leonardo DRS, I | +5.25% | — |
-| BAX | Baxter Internat | +5.24% | — |
-| VRT | Vertiv Holdings | +5.23% | — |
-| ALSN | Allison Transmi | +5.16% | — |
-| ILMN | Illumina, Inc. | +5.13% | — |
-| LKNCY | Luckin Coffee I | +5.13% | — |
-| BMNR | BitMine Immersi | +5.07% | — |
-| DHI | D.R. Horton, In | -5.03% | — |
+| RYTM | Rhythm Pharmace | +28.04% | — |
+| DUOL | Duolingo, Inc. | +25.99% | — |
+| YOU | Clear Secure, I | +23.70% | — |
+| FIS | Fidelity Nation | -23.67% | — |
+| HUT | Hut 8 Corp. | -23.23% | — |
+| STRL | Sterling Infras | -21.46% | — |
+| MOD | Modine Manufact | -21.43% | — |
+| PCOR | Procore Technol | +19.68% | — |
+| INIO | INNIO N.V. | -19.50% | — |
+| MDLN | Medline Inc. | +18.36% | — |
+| LGN | Legence Corp. | -17.95% | — |
+| LIVN | LivaNova PLC | +17.88% | — |
+| UNM | Unum Group | -17.84% | — |
+| MOS | Mosaic Company  | +17.37% | — |
+| FPS | Forgent Power S | -17.32% | — |
+| TRMB | Trimble Inc. | -17.31% | — |
+| GLXY | Galaxy Digital  | -16.99% | — |
+| SEI | Solaris Energy  | -16.91% | — |
+| IESC | IES Holdings, I | -16.87% | — |
+| MTZ | MasTec, Inc. | -15.39% | — |
+| XYZ | Block, Inc. | +15.30% | — |
+| SM | SM Energy Compa | -15.30% | — |
+| FIX | Comfort Systems | -15.08% | — |
+| DDOG | Datadog, Inc. | -14.42% | — |
+| TREX | Trex Company, I | +14.30% | — |
+| VST | Vistra Corp. | -13.83% | — |
+| PFGC | Performance Foo | +13.53% | — |
+| NRG | NRG Energy, Inc | -13.52% | — |
+| ZBH | Zimmer Biomet H | +13.49% | — |
+| TPL | Texas Pacific L | -13.36% | — |
+| PS | Pershing Square | +13.20% | — |
+| HL | Hecla Mining Co | +13.17% | — |
+| MRNA | Moderna, Inc. | +13.11% | — |
+| SWK | Stanley Black & | +13.10% | — |
+| AUGO | Aura Minerals I | +12.92% | — |
+| SMTC | Semtech Corpora | -12.92% | — |
+| BRKR | Bruker Corporat | +12.90% | — |
+| VRT | Vertiv Holdings | -12.89% | — |
+| EQX | Equinox Gold Co | +12.80% | — |
+| NVT | nVent Electric  | -12.72% | — |
+| CDW | CDW Corporation | +12.67% | — |
+| CNC | Centene Corpora | +12.64% | — |
+| SANM | Sanmina Corpora | -12.60% | — |
+| CVS | CVS Health Corp | -12.53% | — |
+| LYFT | Lyft, Inc. | +12.42% | — |
+| POWL | Powell Industri | -12.39% | — |
+| FLEX | Flex Ltd. | -12.33% | — |
+| LB | LandBridge Corp | -12.31% | — |
+| KTOS | Kratos Defense  | -12.27% | — |
+| WPM | Wheaton Preciou | +11.99% | — |
+| CPNG | Coupang, Inc. | +11.95% | — |
+| FORM | FormFactor, Inc | -11.93% | — |
+| PWR | Quanta Services | -11.65% | — |
+| MIRM | Mirum Pharmaceu | +11.42% | — |
+| SKY | Champion Homes, | +11.35% | — |
+| IREN | IREN LIMITED | -11.24% | — |
+| VSAT | ViaSat, Inc. | -11.23% | — |
+| AEIS | Advanced Energy | -11.15% | — |
+| VICR | Vicor Corporati | -11.14% | — |
+| MXL | MaxLinear, Inc | -11.13% | — |
+| NXT | Nextpower Inc. | +11.12% | — |
+| W | Wayfair Inc. | +11.00% | — |
+| FND | Floor & Decor H | +10.92% | — |
+| UHS | Universal Healt | +10.91% | — |
+| JKHY | Jack Henry & As | +10.83% | — |
+| IBP | Installed Build | +10.81% | — |
+| AGI | Alamos Gold Inc | +10.78% | — |
+| APP | Applovin Corpor | +10.69% | — |
+| EXPE | Expedia Group,  | +10.54% | — |
+| FTAI | FTAI Aviation L | -10.54% | — |
+| HCA | HCA Healthcare, | +10.34% | — |
+| IAG | Iamgold Corpora | +10.22% | — |
+| TTMI | TTM Technologie | -10.11% | — |
+| CQP | Cheniere Energy | -10.07% | — |
+| WCC | WESCO Internati | -9.92% | — |
+| NEM | Newmont Corpora | +9.90% | — |
+| CRWV | CoreWeave, Inc. | -9.90% | — |
+| ZG | Zillow Group, I | +9.89% | — |
+| HGTY | Hagerty, Inc. | +9.86% | — |
+| ETN | Eaton Corporati | -9.86% | — |
+| MOG-A | Moog Inc. | -9.85% | — |
+| BKNG | Booking Holding | +9.83% | — |
+| RDNT | RadNet, Inc. | +9.67% | — |
+| AEM | Agnico Eagle Mi | +9.67% | — |
+| DLTR | Dollar Tree, In | +9.64% | — |
+| EME | EMCOR Group, In | -9.64% | — |
+| RIOT | Riot Platforms, | +9.63% | — |
+| SIMO | Silicon Motion  | -9.59% | — |
+| THC | Tenet Healthcar | +9.58% | — |
+| MMM | 3M Company | +9.55% | — |
+| CRDO | Credo Technolog | -9.55% | — |
+| GNRC | Generac Holdlin | -9.54% | — |
+| GXO | GXO Logistics,  | +9.48% | — |
+| GMED | Globus Medical, | +9.45% | — |
+| Z | Zillow Group, I | +9.43% | — |
+| ISRG | Intuitive Surgi | +9.38% | — |
+| SYK | Stryker Corpora | +9.37% | — |
+| SITM | SiTime Corporat | -9.35% | — |
+| GEV | GE Vernova Inc. | -9.30% | — |
+| CIEN | Ciena Corporati | -9.28% | — |
+| BLDR | Builders FirstS | +9.26% | — |
+| OGC | OceanaGold Corp | +9.19% | — |
+| CLF | Cleveland-Cliff | -9.19% | — |
+| CW | Curtiss-Wright  | -9.17% | — |
+| AG | First Majestic  | +9.15% | — |
+| PHG | Koninklijke Phi | +9.14% | — |
+| NAVN | Navan, Inc. | +9.11% | — |
+| SBSW | D/B/A Sibanye-S | +9.07% | — |
+| CLS | Celestica, Inc. | -9.05% | — |
+| AROC | Archrock, Inc. | -9.03% | — |
+| KEX | Kirby Corporati | -9.02% | — |
+| MOH | Molina Healthca | +8.93% | — |
+| MUR | Murphy Oil Corp | -8.92% | — |
+| DELL | Dell Technologi | -8.82% | — |
+| TSEM | Tower Semicondu | -8.75% | — |
+| CGNX | Cognex Corporat | -8.69% | — |
+| VIST | Vista Energy S. | -8.69% | — |
+| ONTO | Onto Innovation | -8.68% | — |
+| DRS | Leonardo DRS, I | -8.59% | — |
+| TLN | Talen Energy Co | -8.54% | — |
+| AVAV | AeroVironment,  | -8.34% | — |
+| STX | Seagate Technol | -8.13% | — |
 
-*由 GitHub Actions 自动生成 · 2026-11-04 09:31 北京时间*
+*由 GitHub Actions 自动生成 · 2026-11-05 09:35 北京时间*
